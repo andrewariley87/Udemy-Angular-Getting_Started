@@ -6,10 +6,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent implements OnInit {
+  serverID: number;
+  serverStatus: string;
+  allowNewServer: boolean;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
+    this.serverID = 7;
+    this.serverStatus = 'ok';
+    this.allowNewServer = false;
   }
 
+  ngOnInit() {
+    this.setToDanger();
+  }
+
+  getServerStatus() {
+    if(this.serverStatus === 'ok') {
+      return 'up and running';
+    } else {
+      return this.serverStatus;
+    }
+  }
+
+  setToDanger() {
+    this.serverStatus = 'in great peril!!!!';
+  }
 }
