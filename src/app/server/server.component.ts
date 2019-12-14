@@ -9,11 +9,14 @@ export class ServerComponent implements OnInit {
   serverID: number;
   serverStatus: string;
   allowNewServer: boolean;
+  serverName: string;
+  userName: string;
 
   constructor() {
     this.serverID = 7;
     this.serverStatus = 'ok';
     this.allowNewServer = false;
+    this.userName = '';
   }
 
   ngOnInit() {
@@ -38,5 +41,13 @@ export class ServerComponent implements OnInit {
 
   onUpdateServerName(event: any) {
     console.log(event);
+  }
+
+  stringIsEmpty(str) {
+    return str === ''
+  }
+
+  submitUserName() {
+    this.userName = ''
   }
 }

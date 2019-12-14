@@ -3,8 +3,27 @@
 <input
   type="text"
   class="form-control"
-  (input)="onUpdateServerName($event)">
+  (input)="onUpdateServerName($event)"
+  [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
 <button
   class="btn btn-primary"
   [disabled]="allowNewServer"
   (click)="onCreateServer()">AddServer</button>
+
+
+
+
+
+<h3>Assignment</h3>
+
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="userName">
+<p>{{ userName }}</p>
+
+<button
+  class="btn btn-primary"
+  [disabled]="stringIsEmpty(userName)"
+  (click)="submitUserName()">Add User</button>
