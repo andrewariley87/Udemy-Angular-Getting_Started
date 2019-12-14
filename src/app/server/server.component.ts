@@ -35,4 +35,8 @@ export class ServerComponent implements OnInit {
   onCreateServer() {
     return alert('Server was created');
   }
+
+  onUpdateServerName(event: any) {
+    console.log(event);
+  }
 }
