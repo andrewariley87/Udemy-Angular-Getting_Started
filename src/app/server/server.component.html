@@ -1,4 +1,5 @@
 <p>The server with ID {{ serverID }} is {{ getServerStatus() }}</p>
 <button
   class="btn btn-primary"
-  [disabled]="allowNewServer">AddServer</button>
+  [disabled]="allowNewServer"
+  (click)="onCreateServer()">AddServer</button>

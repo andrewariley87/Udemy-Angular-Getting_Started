@@ -31,4 +31,8 @@ export class ServerComponent implements OnInit {
   setToDanger() {
     this.serverStatus = 'in great peril!!!!';
   }
+
+  onCreateServer() {
+    return alert('Server was created');
+  }
 }
